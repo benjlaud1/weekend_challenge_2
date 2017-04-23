@@ -40,6 +40,12 @@ function getResult () {
     success: function (response) {
       $('#answer').empty();
       $('#answer').append(response.result);
+      clearInputFields();
     } // end success
   }); // end ajax GET
 } // end getResult
+
+function clearInputFields () {
+  $('#input-1').val('');
+  $('#input-2').val('');
+}
