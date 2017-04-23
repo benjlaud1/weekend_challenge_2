@@ -3,8 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>Weekend Challenge 2</title>
+    <script src="jquery.min.js" charset="utf-8"></script>
+    <script src="client.js" charset="utf-8"></script>
   </head>
   <body>
     <h1>Calculator</h1>
+    <input type="text" id="input-1" value="" placeholder="First Number">
+    <input type="text" id="input-2" value="" placeholder="Second Number">
+    <p>Answer: <span id="answer"></span></p>
+    <nav id="math-operation-nav">
+      <button type="button" id="addition" data-operator="+">+</button>
+      <button type="button" id="subtraction" data-operator="-">-</button>
+      <button type="button" id="multiplication" data-operator="*">*</button>
+      <button type="button" id="division" data-operator="/">/</button>
+    </nav>
   </body>
 </html>
