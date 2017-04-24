@@ -1,7 +1,8 @@
 #container {
   text-align: center;
   /* this width setting will most likely not work for you but in firefox will center the calculator on the screen*/
-  width: -moz-fit-content;
+  /*width: -moz-fit-content;*/
+  width: 156px;
   margin-left: auto;
   margin-right: auto;
   padding: 0px 10px 15px 10px;
