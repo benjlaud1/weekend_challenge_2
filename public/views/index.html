@@ -5,17 +5,51 @@
     <title>Weekend Challenge 2</title>
     <script src="jquery.min.js" charset="utf-8"></script>
     <script src="client.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="views/styles.css">
   </head>
   <body>
-    <h1>Calculator</h1>
-    <input type="text" id="input-1" value="" placeholder="First Number">
-    <input type="text" id="input-2" value="" placeholder="Second Number">
-    <p>Answer: <span id="answer"></span></p>
-    <nav id="math-operation-nav">
-      <button type="button" id="addition" data-operator="+">+</button>
-      <button type="button" id="subtraction" data-operator="-">-</button>
-      <button type="button" id="multiplication" data-operator="*">*</button>
-      <button type="button" id="division" data-operator="/">/</button>
-    </nav>
+    <div id="container">
+      <h1 id="header">PRIME CALC</h1>
+      <!-- base mode code below -->
+      <!-- <input type="numbers" id="input-1" placeholder="First Number">
+      <input type="numbers" id="input-2" placeholder="Second Number">
+      <p>Answer: <span id="answer"></span></p>
+      <nav id="math-operation-nav">
+        <button type="button" id="addition" data-operator="+">+</button>
+        <button type="button" id="subtraction" data-operator="-">-</button>
+        <button type="button" id="multiplication" data-operator="*">*</button>
+        <button type="button" id="division" data-operator="/">/</button>
+      </nav>
+      <br> -->
+      <div class="calculator-div">
+        <input type="numbers" id="screen">
+        <div id="input-keys">
+          <nav id="top-row">
+            <button type="button" class="number-pad" data-number="7">7</button>
+            <button type="button" class="number-pad" data-number="8">8</button>
+            <button type="button" class="number-pad" data-number="9">9</button>
+            <button type="button" class="operator" data-operator="/">/</button>
+          </nav>
+          <nav id="middle-top-row">
+            <button type="button" class="number-pad" data-number="4">4</button>
+            <button type="button" class="number-pad" data-number="5">5</button>
+            <button type="button" class="number-pad" data-number="6">6</button>
+            <button type="button" class="operator" data-operator="*">*</button>
+          </nav>
+          <nav id="middle-bottom-row">
+            <button type="button" class="number-pad" data-number="1">1</button>
+            <button type="button" class="number-pad" data-number="2">2</button>
+            <button type="button" class="number-pad" data-number="3">3</button>
+            <button type="button" class="operator" data-operator="-">-</button>
+          </nav>
+          <nav id="bottom-row">
+            <button type="button" class="number-pad zero" data-number="0">0</button>
+            <button type="button" class="number-pad" data-number=".">.</button>
+            <button type="button" id="equals">=</button>
+            <button type="button" class="operator" data-operator="+">+</button>
+          </nav>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
