@@ -11,6 +11,8 @@ function onReady () {
   $('#input-keys').on('click', '.number-pad', numberSelector);
   $('#input-keys').on('click', '.operator', operatorSelector);
   $('#equals').on('click', equalsSelector);
+  $('#clears').on('click', '#clear', clearInputFields);
+  $('#clears').on('click', '#backspace', deleteNumber);
 
   clearInputFields();
 } // end onReady
@@ -62,6 +64,7 @@ function clearInputFields () {
   // $('#input-1').val('');
   // $('#input-2').val('');
   $('#screen').val('');
+  noPeriod = true;
 } // end clearInputFields
 
 // record number button presses and append to the screen
@@ -103,3 +106,13 @@ function equalsSelector () {
     } // end success
   }); // end ajax POST
 } // end equalsSelector
+
+// removes the last number from the string on the screen
+function deleteNumber () {
+  // check if deleting the '.'
+  if ( $('#screen').val().substring( $('#screen').val().length - 1 , $('#screen').val().length ) === '.' ) {
+    noPeriod = true;
+  }
+  var newScreen = $('#screen').val().substring(0, ($('#screen').val()).length - 1);
+  $('#screen').val(newScreen);
+}
