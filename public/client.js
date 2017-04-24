@@ -53,7 +53,10 @@ function getResult () {
       // $('#answer').empty();
       // $('#answer').append(response.result);
       clearInputFields();
-      $('#screen').val(response.result);
+      $('#screen').val('. ');
+      setTimeout(function () {$('#screen').val('. . ');}, 1000);
+      setTimeout(function () {$('#screen').val('. . . ');}, 2000);
+      setTimeout(function () {$('#screen').val(response.result);}, 3000);
     } // end success
   }); // end ajax GET
 } // end getResult
